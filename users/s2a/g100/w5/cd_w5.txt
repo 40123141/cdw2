@@ -1,0 +1,66 @@
+以 kmolab 關鍵字查詢, 連結到課程網頁
+
+找到 task1 網頁
+
+開啟本地端可攜環境
+
+git clone https://github.com/2015fallhw/cdw2.git
+
+以 leo editor 開啟或建立自己組別目錄內的 .leo 檔案
+
+開啟本地端的 Solvespace, 要了解 .slvs .svg 與 wsgi python 繪圖程式間的關係
+
+Task0:
+
+
+Task1:
+
+    git clone
+
+    fork 
+
+    pull request
+
+    * github pages -> gh-pages
+
+    javascript -> Pro/Web.Link (localhost)
+
+    * www server (wsgi in python) <- html +javascript
+
+wsgi
+    setup.py
+    wsgi.py
+    myflaskapp.py
+    init.py
+
+symbolic
+
+symbol
+
+pip install sympy
+
+from sympy import *
+# center ot radius 40
+x1 = Symbol('x1')
+y1 = Symbol('y1')
+# upper tangent point
+x2 = Symbol('x2')
+y2 = Symbol('y2')
+# lower tangent point
+x3 = Symbol('x3')
+y3 = Symbol('y3')
+answer = solve([x2**2 + y2**2 - 7*7, (x1-x2)**2+(y1-y2)**2 -40**2, (x1-x3)**2+(y1-y3)**2 -40**2, (x1)**2+(y1)**2 -47**2, \
+       (x1)**2+(y1+20)**2 -47**2, x2-x3], [x1, y1, x2, y2, x3, y3])
+group = 1
+for i in answer:
+    print("group", group, ":")
+    for j in i:
+        print(j.evalf(5))
+    group += 1
+
+SVG
+
+M -> Move to
+
+A -> Arc 
+

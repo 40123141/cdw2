@@ -1,0 +1,46 @@
+Mechanical Design (機械設計)
+
+    Thermal & Fluid (熱流)
+    Solid Mechanics (固力)
+    Electrical & Electronics (電機電子)
+    Information & Telecommunication (資訊通信)
+
+    Design & Manufacturing & Control & Management (設計製造控制與管理)
+
+    Oral & Text & 2D Graphics & 3D Graphics (口語表達, 文字表達, 2D 與 3D 圖像表達, 理論分析表達與實體表達)
+    & Analytical analysis & Physical Models
+
+Collaboration (協同)
+Cooperation (合作)
+
+Fork (這裡希望將它翻為倉儲資料的"複刻"), 而且這種複刻的子倉儲, 可以被改版, 然後再透過"拉回請求", 將版本資料拉回合併, 也可以逆轉"拉回請求"流程, 從父倉儲取回最新的版本內容)
+
+Pull Request (拉回請求)
+
+ungit (一種用 node.js 編寫的 git GUI 工具)
+
+sourcetree (一種 git GUI 視窗單機程式套件)
+
+    portable (可攜, sourcetree 可以設法安裝為可攜的 Windows 版本)
+
+Web based (網際)
+
+WWW Server (全球資訊網伺服器)
+
+html (超文件傳輸語言)
+
+    form (表單)
+
+Javascript (一種已經內嵌在各種瀏覽器中的程式語言)
+
+Github Pages (由 Github 所提供的全球資訊網資料伺服架構, 可以將個倉儲的 gh-pages 分支呈現在網頁上)
+
+wsgi (一種支援全球資訊網伺服器端程式伺服架構)
+
+Flask (一種由 Python 編寫的全球資訊網程式框架)
+
+OpenShift (一種提供雲端應用程式服務的平台)
+
+.ssh (位於用戶 home 目錄下, 用來存放 SSH 格式資料的目錄)
+
+    id_rsa (置於 .ssh 目錄下的 private key 檔案名稱)
