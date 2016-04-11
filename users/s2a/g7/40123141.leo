@@ -21,6 +21,7 @@
 </v>
 <v t="amd.20160314224057.1" a="E"><vh>master 分支 flask 程式開發</vh>
 <v t="amd.20160314224303.1"><vh>@edit task0.py</vh></v>
+<v t="leo.20160328121656.1"><vh>@edit task3_40123141.py</vh></v>
 <v t="amd.20160314224737.1" a="E"><vh>@path templates</vh>
 <v t="amd.20160314224744.1"><vh>@edit task1.html</vh></v>
 </v>
@@ -69,6 +70,8 @@ app.register_blueprint(ag100_0.ag100)
 # 註冊位於 bg1_0 (也就是 users.s2a.g100.task0.py 程式中的 ag100 藍圖案例)
 app.register_blueprint(bg1_0.bg1)
 
+
+app.register_blueprint(ag_40123141.ag_40123141)
 if __name__ == "__main__":
     app.run()
 
@@ -85,7 +88,7 @@ import init
 import users.s2b.g99.task0
 import users.s2a.g100.task0 as ag100_0
 import s2b_files.task1.g1.task0 as bg1_0
-
+import users.s2a.g7.task0 as ag_40123141
 # 確定程式檔案所在目錄, 在 Windows 有最後的反斜線
 _curdir = os.path.join(os.getcwd(), os.path.dirname(__file__))
 # 設定在雲端與近端的資料儲存目錄
@@ -396,9 +399,6 @@ def fileaxupload():
 </t>
 <t tx="amd.20160314224239.1"></t>
 <t tx="amd.20160314224737.1"></t>
-<t tx="amd.20160314224744.1">@language html
-傳來的變數為: {{ var1 }}
-</t>
 <t tx="amd.20160315155858.1"></t>
 <t tx="leo.20160310091611.2"></t>
 <t tx="leo.20160310095258.1">先取得各組學員的學號
