@@ -22,6 +22,16 @@
 <v t="amd.20160314224057.1" a="E"><vh>master 分支 flask 程式開發</vh>
 <v t="amd.20160314224303.1"><vh>@edit task0.py</vh></v>
 <v t="leo.20160328121656.1"><vh>@edit task3_40123141.py</vh></v>
+<v t="leo.20160418090225.1"><vh>@edit 40123141 B.py</vh></v>
+<v t="leo.20160418090404.1"><vh>@edit 40123141 C.py</vh></v>
+<v t="leo.20160418090442.1"><vh>@edit 40123141 D.py</vh></v>
+<v t="leo.20160418090521.1"><vh>@edit 40123141 E.py</vh></v>
+<v t="leo.20160418090544.1"><vh>@edit 40123141 F.py</vh></v>
+<v t="leo.20160418090602.1"><vh>@edit 40123141 G.py</vh></v>
+<v t="leo.20160418090644.1"><vh>@edit 40123141 H.py</vh></v>
+<v t="leo.20160418090725.1"><vh>@edit 40123141 I.py</vh></v>
+<v t="leo.20160418090743.1"><vh>@edit 40123141 J.py</vh></v>
+<v t="leo.20160418090805.1"><vh>@edit 40123141 K.py</vh></v>
 <v t="amd.20160314224737.1" a="E"><vh>@path templates</vh>
 <v t="amd.20160314224744.1"><vh>@edit task1.html</vh></v>
 </v>
@@ -48,6 +58,12 @@
 <v t="leo.20160328085927.5"><vh>new:myflaskapp declarations</vh></v>
 </v>
 </v>
+<v t="leo.20160418090125.1" a="E"><vh>Recovered Nodes</vh>
+<v t="leo.20160418090125.2"><vh>Recovered node "myflaskapp declarations" from @clean myflaskapp.py</vh>
+<v t="leo.20160418090125.3"><vh>old:myflaskapp declarations</vh></v>
+<v t="leo.20160418090125.4"><vh>new:myflaskapp declarations</vh></v>
+</v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="amd.20160314224057.1">目前新增的 Blueprint 方法有
@@ -70,8 +86,6 @@ app.register_blueprint(ag100_0.ag100)
 # 註冊位於 bg1_0 (也就是 users.s2a.g100.task0.py 程式中的 ag100 藍圖案例)
 app.register_blueprint(bg1_0.bg1)
 
-
-app.register_blueprint(ag_40123141.ag_40123141)
 if __name__ == "__main__":
     app.run()
 
@@ -88,7 +102,7 @@ import init
 import users.s2b.g99.task0
 import users.s2a.g100.task0 as ag100_0
 import s2b_files.task1.g1.task0 as bg1_0
-import users.s2a.g7.task0 as ag_40123141
+
 # 確定程式檔案所在目錄, 在 Windows 有最後的反斜線
 _curdir = os.path.join(os.getcwd(), os.path.dirname(__file__))
 # 設定在雲端與近端的資料儲存目錄
@@ -509,6 +523,148 @@ app.secret_key = 'A0Zr9@8j/3yX R~XHH!jmN]LWX/,?R@T'
 
 </t>
 <t tx="leo.20160328085927.5"># coding: utf-8
+from flask import Flask, send_from_directory, request, redirect, render_template, session, make_response
+import random
+import math
+import os
+# init.py 為自行建立的起始物件
+import init
+
+# 導入各組的程式 (第2步/總共3步, 前面1步利用 Blueprint 建立於 users 目錄下的 task0.py 中的連結對應方法)
+import users.s2b.g99.task0
+import users.s2a.g100.task0 as ag100_0
+import s2b_files.task1.g1.task0 as bg1_0
+
+# 確定程式檔案所在目錄, 在 Windows 有最後的反斜線
+_curdir = os.path.join(os.getcwd(), os.path.dirname(__file__))
+# 設定在雲端與近端的資料儲存目錄
+if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
+    # 表示程式在雲端執行
+    data_dir = os.environ['OPENSHIFT_DATA_DIR']
+    static_dir = os.environ['OPENSHIFT_REPO_DIR']+"/static"
+    download_dir = os.environ['OPENSHIFT_DATA_DIR']+"/downloads"
+else:
+    # 表示程式在近端執行
+    data_dir = _curdir + "/local_data/"
+    static_dir = _curdir + "/static"
+    download_dir = _curdir + "/local_data/downloads/"
+
+# 利用 init.py 啟動, 建立所需的相關檔案
+initobj = init.Init()
+
+# 必須先將 download_dir 設為 static_folder, 然後才可以用於 download 方法中的 app.static_folder 的呼叫
+app = Flask(__name__)
+#app.config['download_dir'] = download_dir
+
+# 使用 session 必須要設定 secret_key
+# In order to use sessions you have to set a secret key
+# set the secret key.  keep this really secret:
+app.secret_key = 'A0Zr9@8j/3yX R~XHH!jmN]LWX/,?R@T'
+
+
+
+
+
+
+
+</t>
+<t tx="leo.20160418090125.1"></t>
+<t tx="leo.20160418090125.2">(uncached) amd.20160314224223.1
+Diff...
+  # coding: utf-8
+  from flask import Flask, send_from_directory, request, redirect, render_template, session, make_response
+  import random
+  import math
+  import os
+  # init.py 為自行建立的起始物件
+  import init
+  
+  # 導入各組的程式 (第2步/總共3步, 前面1步利用 Blueprint 建立於 users 目錄下的 task0.py 中的連結對應方法)
+  import users.s2b.g99.task0
+  import users.s2a.g100.task0 as ag100_0
+  import s2b_files.task1.g1.task0 as bg1_0
+- 
++ import users.s2a.g7.task0 as ag_40123141
+  # 確定程式檔案所在目錄, 在 Windows 有最後的反斜線
+  _curdir = os.path.join(os.getcwd(), os.path.dirname(__file__))
+  # 設定在雲端與近端的資料儲存目錄
+  if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
+      # 表示程式在雲端執行
+      data_dir = os.environ['OPENSHIFT_DATA_DIR']
+      static_dir = os.environ['OPENSHIFT_REPO_DIR']+"/static"
+      download_dir = os.environ['OPENSHIFT_DATA_DIR']+"/downloads"
+  else:
+      # 表示程式在近端執行
+      data_dir = _curdir + "/local_data/"
+      static_dir = _curdir + "/static"
+      download_dir = _curdir + "/local_data/downloads/"
+  
+  # 利用 init.py 啟動, 建立所需的相關檔案
+  initobj = init.Init()
+  
+  # 必須先將 download_dir 設為 static_folder, 然後才可以用於 download 方法中的 app.static_folder 的呼叫
+  app = Flask(__name__)
+  #app.config['download_dir'] = download_dir
+  
+  # 使用 session 必須要設定 secret_key
+  # In order to use sessions you have to set a secret key
+  # set the secret key.  keep this really secret:
+  app.secret_key = 'A0Zr9@8j/3yX R~XHH!jmN]LWX/,?R@T'
+  
+  
+  
+  
+  
+  
+  
+</t>
+<t tx="leo.20160418090125.3"># coding: utf-8
+from flask import Flask, send_from_directory, request, redirect, render_template, session, make_response
+import random
+import math
+import os
+# init.py 為自行建立的起始物件
+import init
+
+# 導入各組的程式 (第2步/總共3步, 前面1步利用 Blueprint 建立於 users 目錄下的 task0.py 中的連結對應方法)
+import users.s2b.g99.task0
+import users.s2a.g100.task0 as ag100_0
+import s2b_files.task1.g1.task0 as bg1_0
+import users.s2a.g7.task0 as ag_40123141
+# 確定程式檔案所在目錄, 在 Windows 有最後的反斜線
+_curdir = os.path.join(os.getcwd(), os.path.dirname(__file__))
+# 設定在雲端與近端的資料儲存目錄
+if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
+    # 表示程式在雲端執行
+    data_dir = os.environ['OPENSHIFT_DATA_DIR']
+    static_dir = os.environ['OPENSHIFT_REPO_DIR']+"/static"
+    download_dir = os.environ['OPENSHIFT_DATA_DIR']+"/downloads"
+else:
+    # 表示程式在近端執行
+    data_dir = _curdir + "/local_data/"
+    static_dir = _curdir + "/static"
+    download_dir = _curdir + "/local_data/downloads/"
+
+# 利用 init.py 啟動, 建立所需的相關檔案
+initobj = init.Init()
+
+# 必須先將 download_dir 設為 static_folder, 然後才可以用於 download 方法中的 app.static_folder 的呼叫
+app = Flask(__name__)
+#app.config['download_dir'] = download_dir
+
+# 使用 session 必須要設定 secret_key
+# In order to use sessions you have to set a secret key
+# set the secret key.  keep this really secret:
+app.secret_key = 'A0Zr9@8j/3yX R~XHH!jmN]LWX/,?R@T'
+
+
+
+
+
+
+
+</t>
+<t tx="leo.20160418090125.4"># coding: utf-8
 from flask import Flask, send_from_directory, request, redirect, render_template, session, make_response
 import random
 import math
